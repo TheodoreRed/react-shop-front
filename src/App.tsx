@@ -1,21 +1,26 @@
-import { useEffect, useState } from "react";
+import {
+  Navigate,
+  Route,
+  BrowserRouter as Router,
+  Routes,
+} from "react-router-dom";
 import "./App.css";
 import ProductList from "./components/ProductList";
-import { getAllProducts } from "./services/productService";
-import Product from "./models/Product";
+import Header from "./components/Header";
+import Home from "./components/Home";
+import ProductDetails from "./components/ProductDetails";
 
 function App() {
-  const [products, setProducts] = useState<Product[]>([]);
-
-  useEffect(() => {
-    console.log("use effect ran");
-    getAllProducts().then((res) => setProducts(res));
-  }, [products]);
-
   return (
-    <div className="App">
-      <ProductList products={products} />
-    </div>
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/products" element={<ProductList />} />
+        <Route path="/products/:id" element={<ProductDetails />} />
+        <Route path="*" element={<Navigate to="/" />} />
+      </Routes>
+    </Router>
   );
 }
 
