@@ -1,0 +1,17 @@
+tr img {
+  width: 100px;
+  height: auto;
+  border-radius: 5px;
+}
+
+tr td {
+  padding: 10px;
+  text-align: center;
+}
+
+tr td button.quantityBtn {
+  padding: 0;
+  margin: 4px;
+  width: 20px;
+  height: 20px;
+}

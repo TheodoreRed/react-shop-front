@@ -1,0 +1,32 @@
+.Cart {
+  margin: 20px; /* Add some margin around the cart */
+}
+
+.Cart button {
+  background-color: rgb(139, 0, 0);
+  color: white; /* White text color */
+  padding: 10px 20px; /* Padding inside the button */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners for the button */
+  cursor: pointer; /* Pointer cursor on hover */
+  margin-bottom: 20px; /* Margin below the button */
+  transition: background-color 0.3s;
+}
+
+.Cart button:hover {
+  background-color: red;
+}
+
+table {
+  width: 100%; /* Make the table take full width */
+  border-collapse: collapse; /* Collapse borders */
+}
+
+thead th {
+  background-color: #555;
+  padding: 10px;
+}
+
+tbody td {
+  border-bottom: 1px solid #ddd;
+}

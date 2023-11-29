@@ -25,7 +25,7 @@ const Filter = () => {
     if (limit) {
       searchParams.limit = limit;
     }
-    navigate(`/products?${new URLSearchParams(searchParams as any)}`);
+    navigate(`/products?${new URLSearchParams({ ...searchParams })}`);
   };
   return (
     <form className="Filter" onSubmit={submitHandler}>

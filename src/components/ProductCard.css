@@ -55,6 +55,30 @@
   height: auto;
 }
 
+.ProductCard .addToCartBtn {
+  position: relative;
+}
+
+.ProductCard button {
+  background-color: #007bff;
+  color: white;
+  border: 4px outset black;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 10px;
+  border-radius: 15px 0 0 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: absolute;
+  right: -15px;
+  bottom: -15px;
+}
+
+.ProductCard button:hover {
+  background-color: #0056b3;
+}
+
 @media only screen and (min-width: 768px) {
   .ProductCard {
     width: calc(33.33% - 40px); /* 3 items per row */
